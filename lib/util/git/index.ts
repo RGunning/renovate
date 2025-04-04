@@ -25,6 +25,7 @@ import { incLimitedValue } from '../../workers/global/limits';
 import { getCache } from '../cache/repository';
 import { newlineRegex, regEx } from '../regex';
 import { matchRegexOrGlobList } from '../string-match';
+import { getGitEnvironmentVariables } from './auth';
 import { parseGitAuthor } from './author';
 import {
   getCachedBehindBaseResult,
@@ -55,7 +56,6 @@ import type {
   StorageConfig,
   TreeItem,
 } from './types';
-import { getGitEnvironmentVariables } from './auth';
 
 export { setNoVerify } from './config';
 export { setPrivateKey } from './private-key';
